@@ -1,17 +1,24 @@
 import "./assets/scss/main.scss";
 
-import grid from "./components/grid.html";
+// development grid system
+// import grid from "./components/grid.html";
+
+// website blocks
 import header from "./components/header.html";
+import content from "./components/content.html";
 import footer from "./components/footer.html";
 
-console.log("Executing index.js");
+console.log("Executing app.js");
 
 if (typeof document !== "undefined") {
   console.log("Inject components");
 
   document.addEventListener("DOMContentLoaded", () => {
-    // document.getElementById("root").innerHTML = header + footer;
-    document.body.insertAdjacentHTML("afterBegin", grid);
-    document.body.insertAdjacentHTML("beforeEnd", header + footer);
+    document.getElementById('root').insertAdjacentHTML("afterBegin", header + content + footer);
+
+    // injects development grid system
+    if (typeof grid !== "undefined") {
+      document.body.insertAdjacentHTML("afterBegin", grid);
+    }
   });
 }

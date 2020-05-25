@@ -19,6 +19,6 @@ $space: ($const-space / $container-width) * 100%; //  0.0125 * 100% = 1.25%
     ) * 100%;
 }
 
-@function gap() {
+@function gap() { // Возможно переделать на переменную $gap
   @return $space / 2;
 }
