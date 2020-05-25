@@ -3,7 +3,6 @@
 
 
 body {
-  // background-color: #DCDBD9
   color: #2c2c2c;
   font: normal 100% Cambria, Georgia, serif;
   line-height: 1.6rem; // testing
@@ -16,10 +15,8 @@ a {
 .grid {
   margin: 0 auto;
   height: 0px;
-  // width: 1280px // based on 1280px
   max-width: $container-width + px;
   display: flex;
-  // opacity: 0.1;
 
   div {
     text-align: center;
@@ -33,17 +30,8 @@ a {
   }
 }
 
-// // Styling
-// .wrapper {
-//    background: silver
-//    margin: 0 auto;
-//    max-width: 1280px
-//    max-width: $container-width + px;
-//    height: 100vh;
-//    display: none;
-// }
+// Styling
 
-// Testing grid system
 .row {
   display: flex;
   .col {
@@ -64,9 +52,6 @@ a {
 }
 [class^='col']{
   margin: 0 gap();
-  // margin: 0 !important;
-  // padding:gap();
-  // background:blue;
 }
 
 .text{
@@ -74,22 +59,18 @@ a {
 }
 
 .container {
-  // padding: 0 gap();
   margin: 0 auto;
   max-width: $container-width + px;
 }
 
 .header, .content, .footer {
-  // margin: gap() 0;
   [class^="col"] {
-    // min-height: 100px;
     background: green;
   }
 }
 
 .content {
   margin: $space 0;
-  // background: green;
 }
 
 .footer {
@@ -99,8 +80,5 @@ img,
 embed,
 object,
 video {
-  // width: 100%
   max-width: 100%;
-  // display: block
-  // max-width: percentage(64/1200)
 }

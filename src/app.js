@@ -1,7 +1,7 @@
 import "./assets/scss/main.scss";
 
 // development grid system
-// import grid from "./components/grid.html";
+import grid from "./components/grid.html";
 
 // website blocks
 import header from "./components/header.html";
