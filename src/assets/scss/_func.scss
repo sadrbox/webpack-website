@@ -1,0 +1,24 @@
+$container-width: 1280; // px
+// const-column
+$const-column-outer: $container-width / 16; // 1280 / 16 = 80
+$const-column-inner: ($const-column-outer - ($const-column-outer / 5));
+$column: ($const-column-inner / $container-width) * 100%; //
+// const-gap
+$const-space: $const-column-outer / 5; // 80 / 5 = 16 / 1280 = 0.0125
+$space: ($const-space / $container-width) * 100%; //  0.0125 * 100% = 1.25%
+// const-content
+// $const-content: ($container-width - $space-gap) / $container-width; // px
+//
+// $column-width: ((($container-width / 16) - $space-gap) / $container-width) * 100; // px
+// $grid-column-width: ($column-width / $container-width) * 100%;
+
+@function col($n) {
+  @return (
+      (($n * $const-column-inner) + (($n * $const-space) - $const-space)) /
+        $container-width
+    ) * 100%;
+}
+
+@function gap() {
+  @return $space / 2;
+}
