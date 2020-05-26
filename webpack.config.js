@@ -19,6 +19,18 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][hash].[ext]',
+              // outputPath: path.resolve(__dirname, 'src/assets/img/')
+            }
+          }
+        ]      
+      }
     ],
   },
   plugins: [

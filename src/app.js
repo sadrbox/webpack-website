@@ -1,5 +1,6 @@
 import "./assets/scss/main.scss";
 
+import logo from "./assets/img/logo.png";
 // development grid system
 import grid from "./components/grid.html";
 
